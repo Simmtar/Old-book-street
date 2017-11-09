@@ -1,0 +1,141 @@
+html{
+	height:100%;
+	background:#f5f5f5;
+	font-size:31.25vw;
+}
+#add{
+	height:100%;
+	@include flexbox();
+	@include flex-direction(column);
+
+	header{
+		@include flexbox();
+		// @include justify-content(center);
+		@include align-items(center);
+		width:100%;
+		height:.47rem;
+		font-size:.14rem;
+		color:white;
+		background:#00c7b4;
+		padding:0 .2rem;
+		
+		img{
+			width:.15rem;
+		}
+		span{
+			padding:1rem;
+		}
+		
+	}
+	section{
+		@include flex(1);
+		width:100%;
+		overflow:scroll;
+		background:#fafafa;
+
+		#m1{
+			@include flexbox();
+
+			height:.45rem;
+			background:white;
+			line-height:.45rem;
+			padding:0 .1rem;
+			font-size:.13rem;
+			margin-bottom:.1rem;
+			border-bottom:.01rem solid #f0f0f0;
+
+			input{
+				@include flex(1);
+				border:none;
+				padding-left:.02rem;
+			}
+			img{
+				height:.21rem;
+				margin-top:.1rem;
+			}
+		}
+		#m2{
+			@include flexbox();
+			border-bottom:.01rem solid #f0f0f0;
+			border-top:.01rem solid #f0f0f0;
+			margin-bottom:.1rem;
+			background:white;
+			width:100%;
+			height:1.66rem;
+			overflow:hidden;
+			div {
+				width:45%;
+				height:100%;
+				padding:.1rem;
+				border-right:.01rem solid #f0f0f0;
+
+				div{
+					width:100%;
+					height:100%;
+					background:#f0f0f0 url(../img/photo.jpg) center center no-repeat;
+					background-size:.98rem .92rem;
+				}
+
+			}
+			ul{
+				width:55%;
+				li{
+					width:100%;
+					input{
+						height:.41rem;
+						padding-left:.1rem;
+						border-top:none;
+						border-left:none;
+						border-bottom:.01rem solid #f0f0f0;
+					}
+					#four{
+						border-bottom:none;
+					}
+				}
+			}
+		}
+		#m3{
+			width:100%;
+			background:white;
+			line-height:.45rem;
+			margin-bottom:.1rem;
+			border-top:.01rem solid #f0f0f0;
+			border-bottom:.01rem solid #f0f0f0;
+			@include flexbox();
+			@include flex-wrap(wrap);
+
+			li{
+				// height:.45rem;
+				width:50%;
+				font-size:.13rem;
+				border-bottom:.01rem solid #f0f0f0;
+				input{
+					width:100%;
+					border:none;
+					padding:0 .1rem;
+				}
+			}
+			li:nth-child(5){
+				border-bottom:none;
+			}
+		}
+		#m4{
+			width:100%;
+			height:.36rem;
+			@include flexbox();
+			@include justify-content(center);
+
+			button{
+				width:3rem;
+				height:100%;
+				background:#01c6b4;
+				text-align:center;
+				border-radius:.05rem;
+				color:white;
+				border:none;
+			}
+		}
+		
+	}
+
+}
